@@ -1,0 +1,9 @@
+[user]
+  name = William I. Olojede
+  email = ilerioluwase97@gmail.com
+
+[core]
+  editor = vim
+
+[color]
+  ui = true
