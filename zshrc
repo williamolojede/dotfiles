@@ -28,4 +28,4 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:./node_modules/.bin"
 
 # default user
-DEFAULT_USER=william
+DEFAULT_USER=`whoami`
