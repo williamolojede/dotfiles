@@ -37,3 +37,9 @@ alias ns='n start'
 alias y='yarn'
 alias yi='yarn install'
 alias yr='yarn run'
+
+
+# ----------------------------------------------------------------------------
+# others
+# ----------------------------------------------------------------------------
+alias crap='create-react-app'
