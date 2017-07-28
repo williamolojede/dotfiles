@@ -1,0 +1,7 @@
+alias :q="exit"
+alias :e="vim"
+
+alias gc="git commit"
+alias gs="git status"
+alias ga="git add ."
+alias gp="git push"

@@ -18,6 +18,8 @@ fi
 
 # ssh ?
 
+source ~/dotfiles/zsh/aliases
+
 #yarn
 export PATH="$PATH:$HOME/.yarn/bin"
 

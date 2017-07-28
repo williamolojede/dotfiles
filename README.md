@@ -19,7 +19,8 @@ respectively.
 ???
 
 # ZSH #
-???
+included files
+> `aliases` - keybiding for commonly used terminal commands
 
 # CREDITS
 1. Drew Niel - [twitter](https://twitter.com/nelstrom) - [github](https://github.com/nelstrom)

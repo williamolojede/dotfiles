@@ -1,0 +1,8 @@
+#yarn
+export PATH="$PATH:$HOME/.yarn/bin"
+
+#laravel
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+#local npm files
+export PATH="$PATH:./node_modules/.bin"
