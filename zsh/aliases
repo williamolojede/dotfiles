@@ -1,8 +1,39 @@
-alias :q="exit"
-alias :e="vim"
+# Sourced by zshrc
+
+alias :q='exit'
+
+# ----------------------------------------------------------------------------
+# paths and dirs
+# ----------------------------------------------------------------------------
+
+alias tree='tree -CFI "node_modules"'       #ignore nodemodules directory
+alias cdd='cd ~/dotfiles'
+
+# ----------------------------------------------------------------------------
+# editors
+# ----------------------------------------------------------------------------
+
+alias e='vim'
+alias evr='e ~/dotfiles/vimrc'
+alias ezr='e ~/dotfiles/zshrc'
+
+# ----------------------------------------------------------------------------
+# git
+# ----------------------------------------------------------------------------
 
 alias g='git'
 alias gc='g commit'
 alias gs='g status'
 alias ga='g add .'
 alias gp='g push'
+
+# ----------------------------------------------------------------------------
+# node
+# ----------------------------------------------------------------------------
+
+alias n='npm'
+alias ni='n install'
+alias ns='n start'
+alias y='yarn'
+alias yi='yarn install'
+alias yr='yarn run'

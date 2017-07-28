@@ -25,3 +25,4 @@ included files
 # CREDITS
 1. Drew Niel - [twitter](https://twitter.com/nelstrom) - [github](https://github.com/nelstrom)
 2. Zach Holman - [twitter](https://twitter.com/holman) - [github](https://github.com/holman)
+3. David O'Trakoun - [twitter](https://twitter.com/davidosomething) - [github](https://github.com/davidosomething)
