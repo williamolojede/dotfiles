@@ -8,7 +8,7 @@ alias :q='exit'
 
 alias tree='tree -CFI "node_modules"'       #ignore nodemodules directory
 alias cdd='cd ~/dotfiles'
-
+alias sites='cd ~/Sites'
 # ----------------------------------------------------------------------------
 # editors
 # ----------------------------------------------------------------------------

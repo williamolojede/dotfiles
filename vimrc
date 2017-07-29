@@ -105,6 +105,11 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+" ==================== UltiSnips ==================== 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
 " ==================== CTRL.P ====================
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'               "ignore directories while searching
 
