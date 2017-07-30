@@ -64,6 +64,9 @@ let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
+" ==================== EDITORConfig ==================== 
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']         " ensures that the plugin works well with figitve
+
 " ==================== HTML5.VIM ==================== 
 let g:html5_event_handler_attributes_complete = 0
 let g:html5_rdfa_attributes_complete = 0
@@ -84,6 +87,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDTreeQuitOnOpen = 1              " close nerdtree when i open a new file
 let NERDTreeMinimalUI = 1                 " makes nerdtree look minimal
 let NERDTreeDirArrows = 1
+let g:NERDTreeIgnore=['\.git', 'node_modules'] " ignore node_module folder and .git folder
 
 "  ==================== VIM-JSX ==================== 
 let g:jsx_ext_required = 0                " allow the syntax higlightin to work for .js file also
@@ -91,6 +95,16 @@ let g:jsx_ext_required = 0                " allow the syntax higlightin to work 
 " ==================== VIM AIRLINE ==================== 
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
+
+" ==================== EMMET ==================== 
+let g:user_emmet_install_global = 0
+" let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_settings = {
+\  'javascript' : {
+\      'extends' : 'jsx',
+\  },
+\}
+autocmd FileType html,css,jsx EmmetInstall
 
 " ==================== SYNTASTIC ====================
 let g:syntastic_javascript_checkers=['eslint']
@@ -106,9 +120,19 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 " ==================== UltiSnips ==================== 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger       = "<tab>"
+let g:UltiSnipsJumpForwardTrigger  = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" let g:UltiSnipsSnippetsDir="~/dotfiles/vim/UltiSnips"
+let g:UltiSnipsSnippetDirectories = ['~/dotfiles/vim/UltiSnips', 'UltiSnips']
+let g:UltiSnipsEditSplit="vertical"
+
+" ==================== YouCompleteMe ==================== 
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType    = '<C-n>'
+let g:SuperTabCrMapping                = 0
 
 " ==================== CTRL.P ====================
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'               "ignore directories while searching
