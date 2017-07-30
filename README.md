@@ -23,7 +23,7 @@ included files
 > `aliases` - keybiding for commonly used terminal commands
 
 # TODO #
-1. Add bootsrap script to auto mate the setup
+1. Add bootstrap script to automate the setup
 
 # CREDITS
 1. Drew Niel - [twitter](https://twitter.com/nelstrom) - [github](https://github.com/nelstrom)
