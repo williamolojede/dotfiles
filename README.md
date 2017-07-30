@@ -22,6 +22,9 @@ respectively.
 included files
 > `aliases` - keybiding for commonly used terminal commands
 
+# TODO #
+1. Add bootsrap script to auto mate the setup
+
 # CREDITS
 1. Drew Niel - [twitter](https://twitter.com/nelstrom) - [github](https://github.com/nelstrom)
 2. Zach Holman - [twitter](https://twitter.com/holman) - [github](https://github.com/holman)
