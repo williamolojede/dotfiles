@@ -22,12 +22,20 @@ set cursorline                "highlight the line containing the cursor
 set ignorecase                "searching is not case sensitive
 set smartcase         
 
-" Auto resize Vim splits to active split
-let winwidth=104
-let winheight=5
-let winminheight=5
-set winheight=999
-autocmd VimResized * :wincmd = " automatically rebalance windows on vim resize
+
+
+" ================ Splits/Windows ====================
+" let winwidth=104
+" let winheight=5
+" let winminheight=5
+" set winheight=999
+" autocmd VimResized * :wincmd = " automatically rebalance windows on vim resize
+
+" remaps changing focus between windows
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " ================ Indentation ======================
 set autoindent
@@ -104,7 +112,7 @@ let g:user_emmet_settings = {
 \      'extends' : 'jsx',
 \  },
 \}
-autocmd FileType html,css,jsx EmmetInstall
+autocmd FileType html,css,javascript.jsx EmmetInstall
 
 " ==================== SYNTASTIC ====================
 let g:syntastic_javascript_checkers=['eslint']
@@ -142,7 +150,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'               "ignore 
 " " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-" ==================== KEY BINDINGS ====================
+" ==================== MISC ====================
 " Press Space to turn off highlighting and clear any message already displayed.
 " source: http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
@@ -152,15 +160,30 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 vnoremap // y/\V<C-R>"<CR
 
 " disable backspace in insert mode
-inoremap <Del> <Nop>
-inoremap <Del> <Nop>
+inoremap <Del> <nop>
+inoremap <Del> <nop>
 
 " disable arrow keys in both insert and normal mode
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+inoremap  <Up>     <nop>
+inoremap  <Down>   <nop>
+inoremap  <Left>   <nop>
+inoremap  <Right>  <nop>
+noremap   <Up>     <nop>
+noremap   <Down>   <nop>
+noremap   <Left>   <nop>
+noremap   <Right>  <nop>
+
+let mapleader = ","
+noremap  <leader>- ddp                   " delete and paste above
+nnoremap <leader><silent> <Space> za     " toggle fold open/close
+noremap  <leader>_ ddkP                  " delete an paste below
+inoremap <c-d> <esc>ddi                  " delete entire line in insert mode
+inoremap <c-u> <esc>viwUA                " capitalize word in insert mode
+nnoremap <c-u> viwU                      " capitalize word in normal mode
+nnoremap <leader>ev :vsplit $MYVIMRC<cr> " edit vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr> " source vimrc
+inoremap jk <esc>
+nnoremap L $                             " eol
+nnoremap H ^                             " start of line
+iabbrev @@ ilerioluwase97@gmail.com
+inoremap <esc> <nop>

@@ -9,13 +9,25 @@ alias :q='exit'
 alias tree='tree -CFI "node_modules"'       #ignore nodemodules directory
 alias cdd='cd ~/dotfiles'
 alias sites='cd ~/Sites'
+alias ll='ls -al'
+alias l='ls'
+alias lh='ls -Alh'
+# Go to the root of a project (git root)
+alias root='
+  DIR="$(git rev-parse --show-cdup)"
+  if [ "$DIR" != "" ] ; then
+    cd "$DIR"
+  fi
+'
+
 # ----------------------------------------------------------------------------
 # editors
 # ----------------------------------------------------------------------------
 
-alias e='vim'
+alias e='$EDITOR'
 alias evr='e ~/dotfiles/vimrc'
 alias ezr='e ~/dotfiles/zshrc'
+alias szr='source ~/.zshrc'
 
 # ----------------------------------------------------------------------------
 # git
