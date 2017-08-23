@@ -5,5 +5,5 @@
 
 for f in *;
   do
-    [ -d $f ] && cd "$f" && touch "$1"
+    [ -d $f ] && touch "$f/$1"
   done;
