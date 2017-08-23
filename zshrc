@@ -29,5 +29,8 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 #local npm files
 export PATH="$PATH:./node_modules/.bin"
 
+#personal scripts
+export PATH="$PATH:$HOME/.bin"
+
 # default user
 DEFAULT_USER=`whoami`

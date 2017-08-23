@@ -9,7 +9,8 @@ Create symlinks:
     ln -s ~/dotfiles/vim ~/.vim
     ln -s ~/dotfiles/gitconfig ~/.gitconfig
     ln -s ~/dotfiles/zshrc ~/.zshrc
-
+    ln -s ~/dotfiles/bin ~/.bin
+    
 # VIM #
 
 My preferences for Vim are stored in `dotfiles/vimrc` and `dotfiles/gvimrc`

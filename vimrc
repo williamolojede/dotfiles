@@ -151,6 +151,9 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'               "ignore 
 set hidden
 
 " ==================== MISC ====================
+let mapleader = ','
+let maplocalleader = ','
+
 " Press Space to turn off highlighting and clear any message already displayed.
 " source: http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
@@ -164,26 +167,46 @@ inoremap <Del> <nop>
 inoremap <Del> <nop>
 
 " disable arrow keys in both insert and normal mode
-inoremap  <Up>     <nop>
-inoremap  <Down>   <nop>
-inoremap  <Left>   <nop>
-inoremap  <Right>  <nop>
-noremap   <Up>     <nop>
-noremap   <Down>   <nop>
-noremap   <Left>   <nop>
-noremap   <Right>  <nop>
+  " normal mode
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <<
+noremap <Right> >>
 
-let mapleader = ","
-noremap  <leader>- ddp                   " delete and paste above
-nnoremap <leader><silent> <Space> za     " toggle fold open/close
-noremap  <leader>_ ddkP                  " delete an paste below
-inoremap <c-d> <esc>ddi                  " delete entire line in insert mode
-inoremap <c-u> <esc>viwUA                " capitalize word in insert mode
-nnoremap <c-u> viwU                      " capitalize word in normal mode
-nnoremap <leader>ev :vsplit $MYVIMRC<cr> " edit vimrc
-nnoremap <leader>sv :source $MYVIMRC<cr> " source vimrc
+  " visual mode
+vnoremap <Up> <nop>
+vnoremap <Down> <nop>
+vnoremap <Left> <gv           " indent and still stay in viual mode
+vnoremap <Right> >gv
+
+  " insert mode
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <c-d>
+inoremap <Right> <c-t>
+
+" inoremap  <Up>     <NOP>
+" inoremap  <Down>   <NOP>
+" inoremap  <Left>   <NOP>
+" inoremap  <Right>  <NOP>
+" noremap   <Up>     <NOP>
+" noremap   <Down>   <NOP>
+" noremap   <Left>   <NOP>
+" noremap   <Right>  <NOP>
+
+" disable esc in insert mode and use jk instead
+" inoremap <esc> <NOP>
 inoremap jk <esc>
-nnoremap L $                             " eol
-nnoremap H ^                             " start of line
-iabbrev @@ ilerioluwase97@gmail.com
-inoremap <esc> <nop>
+
+" let mapleader = ","
+" noremap  <leader>- ddp                   " delete and paste above
+" nnoremap <leader><silent> <Space> za     " toggle fold open/close
+" noremap  <leader>_ ddkP                  " delete an paste below
+" inoremap <c-d> <esc>ddi                  " delete entire line in insert mode
+" inoremap <c-u> <esc>viwUA                " capitalize word in insert mode
+" nnoremap <c-u> viwU                      " capitalize word in normal mode
+" nnoremap <leader>ev :vsplit $MYVIMRC<cr> " edit vimrc
+" nnoremap <leader>sv :source $MYVIMRC<cr> " source vimrc
+" nnoremap L $                             " eol
+" nnoremap H ^                             " start of line
+" iabbrev @@ ilerioluwase97@gmail.com

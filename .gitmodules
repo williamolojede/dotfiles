@@ -19,9 +19,6 @@
 [submodule "vim/bundle/indentline"]
 	path = vim/bundle/indentline
 	url = https://github.com/yggdroot/indentline
-[submodule "vim/bundle/neocomplete.vim"]
-	path = vim/bundle/neocomplete.vim
-	url = https://github.com/shougo/neocomplete.vim
 [submodule "vim/bundle/nerdcommenter"]
 	path = vim/bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
