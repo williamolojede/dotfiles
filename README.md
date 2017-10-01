@@ -8,6 +8,7 @@ Create symlinks:
     ln -s ~/dotfiles/gvimrc ~/.gvimrc
     ln -s ~/dotfiles/vim ~/.vim
     ln -s ~/dotfiles/gitconfig ~/.gitconfig
+    ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
     ln -s ~/dotfiles/zshrc ~/.zshrc
     ln -s ~/dotfiles/bin ~/.bin
     

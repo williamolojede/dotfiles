@@ -198,6 +198,13 @@ inoremap <Right> <c-t>
 " inoremap <esc> <NOP>
 inoremap jk <esc>
 
+" Allows you to easily replace the current word and all its occurrences.
+nnoremap <Leader>rc :%s/\<<C-r><C-w>\>/
+vnoremap <Leader>rc y:%s/<C-r>"/
+
+nnoremap <leader>ev :vsplit $MYVIMRC<cr> " edit vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr> " source vimrc
+
 " let mapleader = ","
 " noremap  <leader>- ddp                   " delete and paste above
 " nnoremap <leader><silent> <Space> za     " toggle fold open/close
@@ -205,8 +212,6 @@ inoremap jk <esc>
 " inoremap <c-d> <esc>ddi                  " delete entire line in insert mode
 " inoremap <c-u> <esc>viwUA                " capitalize word in insert mode
 " nnoremap <c-u> viwU                      " capitalize word in normal mode
-" nnoremap <leader>ev :vsplit $MYVIMRC<cr> " edit vimrc
-" nnoremap <leader>sv :source $MYVIMRC<cr> " source vimrc
 " nnoremap L $                             " eol
 " nnoremap H ^                             " start of line
 " iabbrev @@ ilerioluwase97@gmail.com

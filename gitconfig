@@ -4,6 +4,7 @@
 
 [core]
   editor = vim
+	excludesfile = /Users/williamilerioluwase/.gitignore_global
 
 [color]
   ui = true
