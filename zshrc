@@ -29,6 +29,10 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 #local npm files
 export PATH="$PATH:./node_modules/.bin"
 
+#go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 #personal scripts
 export PATH="$PATH:$HOME/.bin"
 
