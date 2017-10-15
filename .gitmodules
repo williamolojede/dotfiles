@@ -118,3 +118,6 @@
 [submodule "vim/bundle/vim-closetag"]
 	path = vim/bundle/vim-closetag
 	url = https://github.com/alvan/vim-closetag.git
+[submodule "vim/bundle/syntastic-local-eslint.vim"]
+	path = vim/bundle/syntastic-local-eslint.vim
+	url = https://github.com/mtscout6/syntastic-local-eslint.vim.git
