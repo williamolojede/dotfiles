@@ -120,6 +120,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
+" let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
 let g:syntastic_javascript_eslint_exe = 'npm run lint --'
 
 " ==================== STATUSLINE ==================== 
@@ -149,6 +150,13 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'               "ignore 
 " " exist in the background without being in a window.
 " " http://items.sjbach.com/319/configuring-vim-right
 set hidden
+
+" ==================== YouCompleteMe ==================== 
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+let g:closetag_emptyTags_caseSensitive = 1
+let g:closetag_close_shortcut = '<leader>>'
+let g:closetag_shortcut = '>'
 
 " ==================== MISC ====================
 let mapleader = ','
