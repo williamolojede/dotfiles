@@ -1,0 +1,2 @@
+# enable the Finder’s title bar to display the long pathname
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
