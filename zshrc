@@ -17,8 +17,10 @@ else
 fi
 
 # ssh ?
+alias tmux="TERM=screen-256color-bce tmux"
 
 source ~/dotfiles/zsh/aliases
+source ~/dotfiles/zsh/functions
 
 #yarn
 export PATH="$PATH:$HOME/.yarn/bin"

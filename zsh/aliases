@@ -11,6 +11,7 @@ alias cdd='cd ~/dotfiles'
 alias sites='cd ~/Sites'
 alias blog='cd ~/Sites/roadtoseniordev.com'
 alias ll='ls -al'
+alias ld="ls -ld */"
 alias l='ls'
 alias lh='ls -Alh'
 # Go to the root of a project (git root)
