@@ -40,6 +40,7 @@ alias gc='g commit'
 alias gs='g status'
 alias ga='g add .'
 alias gp='g push'
+alias gpn='pushnew' #see './functions'
 
 # ----------------------------------------------------------------------------
 # node

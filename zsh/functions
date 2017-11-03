@@ -47,3 +47,8 @@ function o() {
 	fi;
 }
 
+# push a new branch to remote
+function pushnew() {
+  BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+  git push --set-upstream origin "$BRANCH_NAME"
+}
