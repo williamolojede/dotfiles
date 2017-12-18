@@ -46,6 +46,7 @@ alias gpn='pushnew' #see './functions'
 # node
 # ----------------------------------------------------------------------------
 
+alias nvm='n'
 alias n='npm'
 alias ni='n install'
 alias ns='n start'

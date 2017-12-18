@@ -1,0 +1,9 @@
+--ignore-dir=node_modules
+
+# reaction commerce
+--ignore-dir=.meteor
+--ignore-dir=.reaction
+--ignore-dir=.circleci
+--ignore-dir=imports/plugins/core/orders/server/i18n/
+--ignore-dir=private/data/i18n/
+--ignore-file=match:.app-test.js

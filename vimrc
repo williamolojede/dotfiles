@@ -19,10 +19,22 @@ set autoread                  "Reload files changed outside vim
 set cursorline                "highlight the line containing the cursor
 
 " ================ Better Searching ====================
+set hlsearch                  " highlight search
+set incsearch                 " highlight as search begins
 set ignorecase                "searching is not case sensitive
 set smartcase         
 
+autocmd BufEnter * lcd %:p:h
+nnoremap gb <C-^>
 
+"====[ Swap : and ; to make colon commands easier to type ]======
+nnoremap  ;  :
+nnoremap  :  ;
+
+" call matchadd('ColorColumn', '\%81v', 100)
+
+" exec "set listchars=tab:\uBB\uBB,trail:\uB7,nbsp:~"
+" set list
 
 " ================ Splits/Windows ====================
 " let winwidth=104
@@ -47,6 +59,10 @@ set shiftwidth=2
 set softtabstop=2
 set textwidth=100
 
+" ================ Folding ======================
+set foldmethod=syntax
+let javaScript_fold=1
+
 " ================ Editor UI Appearance ======================
 " set colorcolumn=100          " Highlight the 80th character limit
 set background=light	        " dark mode of solarized
@@ -56,11 +72,12 @@ set number                    " to display line number of just the current line
 set numberwidth=5             " width of the number column
 set scrolloff=3               " Keep at least 3 lines above/below
 set sidescrolloff=5           " Keep at least 5 lines left/right
-set hlsearch                  " highlight search
 set showmatch                 " brackets/braces that is
 set mat=5                     " duration to show matching brace (1/10 sec)
 " set nowrap                    " do not wrap lines
 set ruler		                  " show the cursor position all the time
+set encoding=utf-8
+" set guifont=MesloLGM\ Nerd\ Font\ Mono:h13
 
 " ================ Turn Off Swap Files ==============
 set noswapfile

@@ -69,9 +69,15 @@ export PATH="$PATH:$HOME/.bin"
 DEFAULT_USER=`whoami`
 
 # node verion manager
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # THIS IS FOR ENABLING AUTO SUGGESTION OF COMMAND
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=3"
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# added by travis gem
+[ -f /Users/william/.travis/travis.sh ] && source /Users/william/.travis/travis.sh
+export PATH="/usr/local/sbin:$PATH"
