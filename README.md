@@ -11,6 +11,7 @@ Create symlinks:
     ln -s ~/dotfiles/gitignore_global ~/.gitignore_global
     ln -s ~/dotfiles/zshrc ~/.zshrc
     ln -s ~/dotfiles/bin ~/.bin
+    ln -s ~/dotfiles/ackrc ~/.ackrc
     
 # VIM #
 
