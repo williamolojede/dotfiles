@@ -1,1 +1,1 @@
-ignore-dir=node_modules
+--ignore-dir=node_modules
