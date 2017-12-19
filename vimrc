@@ -21,7 +21,8 @@ set cursorline                "highlight the line containing the cursor
 " ================ Better Searching ====================
 set ignorecase                "searching is not case sensitive
 set smartcase         
-
+set hlsearch                  " highlight search
+set incsearch                 " highlight as search begins
 
 
 " ================ Splits/Windows ====================
@@ -47,6 +48,10 @@ set shiftwidth=2
 set softtabstop=2
 set textwidth=100
 
+" ================ Folding ======================
+set foldmethod=syntax
+let javaScript_fold=1
+
 " ================ Editor UI Appearance ======================
 " set colorcolumn=100          " Highlight the 80th character limit
 set background=light	        " dark mode of solarized
@@ -56,7 +61,6 @@ set number                    " to display line number of just the current line
 set numberwidth=5             " width of the number column
 set scrolloff=3               " Keep at least 3 lines above/below
 set sidescrolloff=5           " Keep at least 5 lines left/right
-set hlsearch                  " highlight search
 set showmatch                 " brackets/braces that is
 set mat=5                     " duration to show matching brace (1/10 sec)
 " set nowrap                    " do not wrap lines
@@ -176,6 +180,9 @@ let maplocalleader = ','
 " Press Space to turn off highlighting and clear any message already displayed.
 " source: http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" go back to the previously opened buffer
+nnoremap gb <C-^>
 
 " Press // To search for visually selected text
 " source: http://vim.wikia.com/wiki/VimTip171
