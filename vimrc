@@ -17,6 +17,8 @@ filetype plugin indent on
 set gcr=a:blinkon0            "Disable cursor blink
 set autoread                  "Reload files changed outside vim
 set cursorline                "highlight the line containing the cursor
+" :au FocusLost * :wa           "auto save on focus lost
+:set autowrite
 
 " ================ Better Searching ====================
 set ignorecase                "searching is not case sensitive
@@ -43,7 +45,7 @@ set autoindent
 set smartindent
 set smarttab
 set expandtab               " expand tabs to spaces
-set tabstop=2
+set tabstop=8
 set shiftwidth=2
 set softtabstop=2
 set textwidth=100
@@ -104,9 +106,21 @@ let g:NERDTreeIgnore=['\.git', 'node_modules'] " ignore node_module folder and .
 "  ==================== VIM-JSX ==================== 
 let g:jsx_ext_required = 0                " allow the syntax higlightin to work for .js file also
 
+" ==================== VIM-MARKDOWN ==================== 
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_toml_frontmatter = 1
+
+
 " ==================== VIM AIRLINE ==================== 
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
+
+" ==================== VIM GO ==================== 
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "5s"
 
 " ==================== EMMET ==================== 
 let g:user_emmet_install_global = 0
@@ -121,10 +135,10 @@ autocmd FileType html,css,javascript.jsx EmmetInstall
 " ==================== SYNTASTIC ====================
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 0
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-let g:syntastic_check_on_up = 1
+let g:syntastic_check_on_wq = 0
+" let g:syntastic_check_on_up = 1
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_typescript_checkers=['tsuquyomi']
 
@@ -160,11 +174,23 @@ let g:SuperTabCrMapping                = 0
 
 " ==================== CTRL.P ====================
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'               "ignore directories while searching
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
 
 " This makes vim act like all other editors, buffers can
 " " exist in the background without being in a window.
 " " http://items.sjbach.com/319/configuring-vim-right
 set hidden
+
+" ==================== javascript-libraries-syntax.vim ====================
+let g:used_javascript_libs = 'react, chai'
+
+" ==================== vim node ====================
+autocmd User Node
+  \ if &filetype == "javascript.jsx" |
+  \   nmap <buffer> <C-w>f <Plug>NodeVSplitGotoFile |
+  \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
+  \ endif
 
 " ==================== YouCompleteMe ==================== 
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
@@ -180,6 +206,8 @@ let maplocalleader = ','
 " Press Space to turn off highlighting and clear any message already displayed.
 " source: http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+nnoremap <Leader>a :Ack!<Space>
 
 " go back to the previously opened buffer
 nnoremap gb <C-^>
