@@ -97,9 +97,6 @@
 [submodule "vim/bundle/vim-ruby"]
   path = vim/bundle/vim-ruby
   url = https://github.com/vim-ruby/vim-ruby
-[submodule "vim/bundle/vim-scss"]
-  path = vim/bundle/vim-scss
-  url = https://github.com/webfd/vim-scss
 [submodule "vim/bundle/vim-surround"]
   path = vim/bundle/vim-surround
   url = https://github.com/tpope/vim-surround

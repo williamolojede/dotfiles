@@ -52,3 +52,10 @@ function pushnew() {
   BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
   git push --set-upstream origin "$BRANCH_NAME"
 }
+
+# remove a vim plugin installed with pathogen
+function rmvplug () {
+  git submodule deinit -f -- "$@"
+  rm -rf .git/modules/"$@"
+  git rm -f "$@"
+}
