@@ -59,3 +59,12 @@ function rmvplug () {
   rm -rf .git/modules/"$@"
   git rm -f "$@"
 }
+
+function addplug () {
+  cdd # go to dotfiles directory
+
+  gitRepo="https://github.com/$1"
+  pluginPath="vim/bundle/$2"
+
+  git submodule add "$gitRepo" "$pluginPath"
+}
