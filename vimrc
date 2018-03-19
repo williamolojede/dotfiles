@@ -124,13 +124,16 @@ let g:go_metalinter_deadline = "5s"
 
 " ==================== EMMET ==================== 
 let g:user_emmet_install_global = 0
-" let g:user_emmet_leader_key='<C-Z>'
+let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_settings = {
 \  'javascript' : {
 \      'extends' : 'jsx',
 \  },
+\  'typescript' : {
+\      'extends' : 'jsx',
+\  },
 \}
-autocmd FileType html,css,javascript.jsx EmmetInstall
+autocmd FileType html,css,scss,javascript.jsx,typescript EmmetInstall
 
 " ==================== SYNTASTIC ====================
 let g:syntastic_always_populate_loc_list = 1
