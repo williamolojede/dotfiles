@@ -63,8 +63,8 @@ function rmvplug () {
 function addplug () {
   cdd # go to dotfiles directory
 
-  gitRepo="https://github.com/$1"
-  pluginPath="vim/bundle/$2"
+  gitRepo="https://github.com/$1"  # e.g: scrooloose/nerdtree.git
+  pluginPath="vim/bundle/$2"       # e.g: nerdtree
 
   git submodule add "$gitRepo" "$pluginPath"
 }

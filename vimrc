@@ -7,7 +7,7 @@ execute pathogen#infect()
 
 "turn on syntax highlighting and prevents unnecessary execution of code when you source your .vimrc
 if !exists("g:syntax_on")
-	syntax enable
+  syntax enable
 endif
 
 " ================ General Config ====================
@@ -22,7 +22,7 @@ set cursorline                "highlight the line containing the cursor
 
 " ================ Better Searching ====================
 set ignorecase                "searching is not case sensitive
-set smartcase         
+set smartcase
 set hlsearch                  " highlight search
 set incsearch                 " highlight as search begins
 
@@ -73,15 +73,15 @@ set noswapfile
 set nobackup
 set nowb
 
-" ==================== VIM-JAVASCRIPT ==================== 
+" ==================== VIM-JAVASCRIPT ===================
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 
-" ==================== EDITORConfig ==================== 
+" ==================== EDITORConfig ====================
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']         " ensures that the plugin works well with figitve
 
-" ==================== HTML5.VIM ==================== 
+" ==================== HTML5.VIM ====================
 let g:html5_event_handler_attributes_complete = 0
 let g:html5_rdfa_attributes_complete = 0
 let g:html5_microdata_attributes_complete = 0
@@ -103,26 +103,26 @@ let NERDTreeMinimalUI = 1                 " makes nerdtree look minimal
 let NERDTreeDirArrows = 1
 let g:NERDTreeIgnore=['\.git', 'node_modules'] " ignore node_module folder and .git folder
 
-"  ==================== VIM-JSX ==================== 
+"  ==================== VIM-JSX ====================
 let g:jsx_ext_required = 0                " allow the syntax higlightin to work for .js file also
 
-" ==================== VIM-MARKDOWN ==================== 
+" ==================== VIM-MARKDOWN ====================
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_toml_frontmatter = 1
 
 
-" ==================== VIM AIRLINE ==================== 
+" ==================== VIM AIRLINE ====================
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
 
-" ==================== VIM GO ==================== 
+" ==================== VIM GO ====================
 let g:go_fmt_command = "goimports"
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_metalinter_deadline = "5s"
 
-" ==================== EMMET ==================== 
+" ==================== EMMET ====================
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<C-Z>'
 let g:user_emmet_settings = {
@@ -141,10 +141,10 @@ let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-" let g:syntastic_check_on_up = 1
 let g:syntastic_javascript_checkers = ['eslint']
+let g:tsuquyomi_disable_quickfix = 1
 let g:syntastic_typescript_checkers=['tsuquyomi']
-
+let g:elm_syntastic_show_warnings = 1
 let g:syntastic_error_symbol = '❌'
 let g:syntastic_style_error_symbol = '🔴'
 let g:syntastic_warning_symbol = '⚠️'
@@ -155,12 +155,12 @@ highlight link SyntasticWarningSign SignColumn
 highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
-" ==================== STATUSLINE ==================== 
+" ==================== STATUSLINE ====================
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" ==================== UltiSnips ==================== 
+" ==================== UltiSnips ====================
 let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
@@ -168,12 +168,15 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:UltiSnipsSnippetDirectories = ['~/dotfiles/vim/UltiSnips', 'UltiSnips']
 let g:UltiSnipsEditSplit="vertical"
 
-" ==================== YouCompleteMe ==================== 
+" ==================== YouCompleteMe ====================
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
+let g:ycm_semantic_triggers = {
+  \ 'elm' : ['.'],
+  \}
 
 " ==================== CTRL.P ====================
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'               "ignore directories while searching
@@ -195,7 +198,7 @@ autocmd User Node
   \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
   \ endif
 
-" ==================== YouCompleteMe ==================== 
+" ==================== YouCompleteMe ====================
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 let g:closetag_emptyTags_caseSensitive = 1
@@ -262,7 +265,6 @@ vnoremap <Leader>rc y:%s/<C-r>"/
 nnoremap <leader>ev :vsplit $MYVIMRC<cr> " edit vimrc
 nnoremap <leader>sv :source $MYVIMRC<cr> " source vimrc
 
-" let mapleader = ","
 " noremap  <leader>- ddp                   " delete and paste above
 " nnoremap <leader><silent> <Space> za     " toggle fold open/close
 " noremap  <leader>_ ddkP                  " delete an paste below
