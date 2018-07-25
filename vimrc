@@ -45,7 +45,7 @@ set autoindent
 set smartindent
 set smarttab
 set expandtab               " expand tabs to spaces
-set tabstop=8
+set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set textwidth=100
@@ -55,23 +55,30 @@ set foldmethod=syntax
 let javaScript_fold=1
 
 " ================ Editor UI Appearance ======================
-" set colorcolumn=100          " Highlight the 80th character limit
-set background=light	        " dark mode of solarized
-colorscheme solarized		      " solarized as color scheme
-set relativenumber		        " to display relative line numbers
+set colorcolumn=80         " Highlight the 80th character limit
+set background=light	      " dark mode of solarized
+colorscheme solarized	      " solarized as color scheme
+set relativenumber	      " to display relative line numbers
 set number                    " to display line number of just the current line
 set numberwidth=5             " width of the number column
 set scrolloff=3               " Keep at least 3 lines above/below
 set sidescrolloff=5           " Keep at least 5 lines left/right
 set showmatch                 " brackets/braces that is
 set mat=5                     " duration to show matching brace (1/10 sec)
-" set nowrap                    " do not wrap lines
-set ruler		                  " show the cursor position all the time
+" set nowrap                  " do not wrap lines
+set ruler		      " show the cursor position all the time
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
 set nobackup
 set nowb
+
+" ================ AutoCommands ==============
+" Jump to last cursor position, see :h last-position-jump
+autocmd BufReadPost *
+  \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+  \ |   exe "normal! g`\""
+  \ | endif
 
 " ==================== VIM-JAVASCRIPT ===================
 let g:javascript_plugin_jsdoc = 1
@@ -110,7 +117,6 @@ let g:jsx_ext_required = 0                " allow the syntax higlightin to work 
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_toml_frontmatter = 1
 
-
 " ==================== VIM AIRLINE ====================
 let g:airline_powerline_fonts = 1
 let g:airline_solarized_bg='dark'
@@ -121,6 +127,12 @@ let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'golint']
 let g:go_metalinter_deadline = "5s"
+let g:go_list_height = 5
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " ==================== EMMET ====================
 let g:user_emmet_install_global = 0
@@ -179,7 +191,8 @@ let g:ycm_semantic_triggers = {
   \}
 
 " ==================== CTRL.P ====================
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'               "ignore directories while searching
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage'               "ignore directories while searching
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|coverage|dist)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 
@@ -198,7 +211,7 @@ autocmd User Node
   \   nmap <buffer> <C-w><C-f> <Plug>NodeVSplitGotoFile |
   \ endif
 
-" ==================== YouCompleteMe ====================
+" ==================== CloseTag ====================
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
 let g:closetag_emptyTags_caseSensitive = 1
@@ -224,7 +237,9 @@ vnoremap // y/\V<C-R>"<CR
 
 " disable backspace in insert mode
 inoremap <Del> <nop>
-inoremap <Del> <nop>
+
+" Insert () => with <c-l>
+imap <c-l> <space>()<space>=><space>
 
 " disable arrow keys in both insert and normal mode
   " normal mode
@@ -245,15 +260,6 @@ inoremap <Down> <nop>
 inoremap <Left> <c-d>
 inoremap <Right> <c-t>
 
-" inoremap  <Up>     <NOP>
-" inoremap  <Down>   <NOP>
-" inoremap  <Left>   <NOP>
-" inoremap  <Right>  <NOP>
-" noremap   <Up>     <NOP>
-" noremap   <Down>   <NOP>
-" noremap   <Left>   <NOP>
-" noremap   <Right>  <NOP>
-
 " disable esc in insert mode and use jk instead
 " inoremap <esc> <NOP>
 inoremap jk <esc>
@@ -263,7 +269,7 @@ nnoremap <Leader>rc :%s/\<<C-r><C-w>\>/
 vnoremap <Leader>rc y:%s/<C-r>"/
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr> " edit vimrc
-nnoremap <leader>sv :source $MYVIMRC<cr> " source vimrc
+nnoremap <leader>. :source $MYVIMRC<cr> " source vimrc
 
 " noremap  <leader>- ddp                   " delete and paste above
 " nnoremap <leader><silent> <Space> za     " toggle fold open/close

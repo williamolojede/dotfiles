@@ -38,9 +38,11 @@ alias szr='source ~/.zshrc'
 alias git=hub
 alias g='git'
 alias gc='g commit'
+alias gcd='g checkout develop'
 alias gs='g status'
 alias ga='g add .'
 alias gp='g push'
+alias gpl='g pull'
 alias gcs='g checkout staging'
 alias gpn='pushnew' #see './functions'
 
@@ -55,6 +57,7 @@ alias nls='n list --depth=0'
 alias nlsg='nls -g'
 alias y='yarn'
 alias yi='yarn install'
+alias ysd='yarn start:dev'
 alias yr='yarn run'
 
 

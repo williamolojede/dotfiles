@@ -3,7 +3,8 @@ export ZSH=$HOME/.oh-my-zsh
 
 # theme?
 # ZSH_THEME="agnoster"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="hyperzsh"
 
 POWERLEVEL9K_MODE='awesome-patched'
 
@@ -57,6 +58,10 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 #local npm files
 export PATH="$PATH:./node_modules/.bin"
+
+# android stuff
+export PATH="$PATH:$HOME/Library/Android/sdk"
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 #go
 export GOPATH=$HOME/go
