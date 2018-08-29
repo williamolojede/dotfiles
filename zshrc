@@ -58,6 +58,7 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 #local npm files
 export PATH="$PATH:./node_modules/.bin"
+export PATH="/usr/local/sbin:$PATH"
 
 # android stuff
 export PATH="$PATH:$HOME/Library/Android/sdk"
