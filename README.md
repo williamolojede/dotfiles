@@ -12,6 +12,8 @@ Create symlinks:
     ln -s ~/dotfiles/zshrc ~/.zshrc
     ln -s ~/dotfiles/bin ~/.bin
     ln -s ~/dotfiles/ackrc ~/.ackrc
+    ln -s ~/dotfiles/tern-config ~/.tern-config
+
     
 # VIM #
 

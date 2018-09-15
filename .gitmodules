@@ -148,3 +148,12 @@
 [submodule "vim/bundle/vim-rhubarb"]
 	path = vim/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "vim/bundle/react-snippets"]
+	path = vim/bundle/react-snippets
+	url = https://github.com/epilande/vim-react-snippets.git
+[submodule "vim/bundle/js-file-import"]
+	path = vim/bundle/js-file-import
+	url = https://github.com/kristijanhusak/vim-js-file-import.git
+[submodule "vim/bundle/vim-gutentags"]
+	path = vim/bundle/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags.git

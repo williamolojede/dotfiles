@@ -184,6 +184,7 @@ let g:UltiSnipsEditSplit="vertical"
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>', '<Up>']
+let g:ycm_add_preview_to_completeopt = 0
 let g:SuperTabDefaultCompletionType    = '<C-n>'
 let g:SuperTabCrMapping                = 0
 let g:ycm_semantic_triggers = {
@@ -218,6 +219,12 @@ let g:closetag_emptyTags_caseSensitive = 1
 let g:closetag_close_shortcut = '<leader>>'
 let g:closetag_shortcut = '>'
 
+" ==================== Ack.vim ====================
+nnoremap <Leader>a :Ack!<Space>
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " ==================== MISC ====================
 let mapleader = ','
 let maplocalleader = ','
@@ -226,7 +233,6 @@ let maplocalleader = ','
 " source: http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-nnoremap <Leader>a :Ack!<Space>
 
 " go back to the previously opened buffer
 nnoremap gb <C-^>

@@ -1,6 +1,8 @@
 --ignore-dir=node_modules
 --ignore-dir=dist
+--ignore-dir=build
 --ignore-dir=coverage
 --ignore-dir=.nyc_output
 
 --ignore-file=is:package-lock.json
+--ignore-file=is:tags

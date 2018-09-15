@@ -1,0 +1,19 @@
+{
+  "libs": [
+    "browser",
+    "jquery",
+    "react",
+    "chai",
+    "ecmascript"
+  ],
+  "plugins": {
+    "angular": {},
+    "doc_comment": null,
+    "es_modules": {},
+    "node": {},
+    "webpack": {}
+  },
+  "dontLoad": [
+    "node_modules/**"
+  ]
+}

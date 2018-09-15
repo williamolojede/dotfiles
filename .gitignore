@@ -2,3 +2,6 @@
 *~
 vim/.netrwhist
 .DS_Store
+tags
+tags.lock
+tags.temp
