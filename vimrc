@@ -19,6 +19,10 @@ set autoread                  "Reload files changed outside vim
 set cursorline                "highlight the line containing the cursor
 " :au FocusLost * :wa           "auto save on focus lost
 :set autowrite
+let mapleader = ','
+let maplocalleader = ','
+" Center the screen quickly
+nnoremap <space> zz
 
 " ================ Better Searching ====================
 set ignorecase                "searching is not case sensitive
@@ -117,9 +121,6 @@ let g:jsx_ext_required = 0                " allow the syntax higlightin to work 
 let g:vim_markdown_conceal = 0
 let g:vim_markdown_toml_frontmatter = 1
 
-" ==================== VIM AIRLINE ====================
-let g:airline_powerline_fonts = 1
-let g:airline_solarized_bg='dark'
 
 " ==================== VIM GO ====================
 let g:go_fmt_command = "goimports"
@@ -147,30 +148,21 @@ let g:user_emmet_settings = {
 \}
 autocmd FileType html,css,scss,javascript.jsx,typescript EmmetInstall
 
-" ==================== SYNTASTIC ====================
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_loc_list_height = 5
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:tsuquyomi_disable_quickfix = 1
-let g:syntastic_typescript_checkers=['tsuquyomi']
-let g:elm_syntastic_show_warnings = 1
-let g:syntastic_error_symbol = '❌'
-let g:syntastic_style_error_symbol = '🔴'
-let g:syntastic_warning_symbol = '⚠️'
-let g:syntastic_style_warning_symbol = '💩'
+" ==================== ALE ====================
+let g:ale_sign_error = '❌'
+let g:ale_sign_warning = '⚠️'
+let g:airline#extensions#ale#enabled = 1
+let g:ale_sign_column_always = 1
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_open_list = 1
+let g:ale_list_window_size = 5
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
 
-highlight link SyntasticErrorSign SignColumn
-highlight link SyntasticWarningSign SignColumn
-highlight link SyntasticStyleErrorSign SignColumn
-highlight link SyntasticStyleWarningSign SignColumn
-
-" ==================== STATUSLINE ====================
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" ==================== VIM AIRLINE ====================
+let g:airline_powerline_fonts = 1
+let g:airline_solarized_bg='dark'
 
 " ==================== UltiSnips ====================
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -192,7 +184,6 @@ let g:ycm_semantic_triggers = {
   \}
 
 " ==================== CTRL.P ====================
-" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|coverage'               "ignore directories while searching
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|coverage|dist)|(\.(swp|ico|git|svn))$'
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
@@ -226,8 +217,6 @@ if executable('ag')
 endif
 
 " ==================== MISC ====================
-let mapleader = ','
-let maplocalleader = ','
 
 " Press Space to turn off highlighting and clear any message already displayed.
 " source: http://vim.wikia.com/wiki/Highlight_all_search_pattern_matches
@@ -243,6 +232,7 @@ vnoremap // y/\V<C-R>"<CR
 
 " disable backspace in insert mode
 inoremap <Del> <nop>
+inoremap <BS> <Nop>
 
 " Insert () => with <c-l>
 imap <c-l> <space>()<space>=><space>

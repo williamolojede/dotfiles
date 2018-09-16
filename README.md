@@ -13,6 +13,7 @@ Create symlinks:
     ln -s ~/dotfiles/bin ~/.bin
     ln -s ~/dotfiles/ackrc ~/.ackrc
     ln -s ~/dotfiles/tern-config ~/.tern-config
+    ln -s ~/dotfiles/stylelintrc ~/.stylelintrc
 
     
 # VIM #

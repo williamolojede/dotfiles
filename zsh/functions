@@ -68,3 +68,7 @@ function addplug () {
 
   git submodule add "$gitRepo" "$pluginPath"
 }
+
+function chrome () {
+  open -a Google\ Chrome "$1"
+}
