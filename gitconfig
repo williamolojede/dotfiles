@@ -3,7 +3,7 @@
   email = ilerioluwase97@gmail.com
 
 [core]
-  editor = nvim
+  editor = vim
 	excludesfile = /Users/william/.gitignore_global
 
 [color]

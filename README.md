@@ -14,6 +14,7 @@ Create symlinks:
     ln -s ~/dotfiles/ackrc ~/.ackrc
     ln -s ~/dotfiles/tern-config ~/.tern-config
     ln -s ~/dotfiles/stylelintrc ~/.stylelintrc
+    ln -s ~/dotfiles/ideavimrc ~/.ideavimrc
 
     
 # VIM #
