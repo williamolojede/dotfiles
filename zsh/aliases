@@ -46,6 +46,7 @@ alias gp='g push'
 alias gpl='g pull'
 alias gcs='g checkout staging'
 alias gpn='pushnew' #see './functions'
+alias grc='git rebase --continue'
 
 # ----------------------------------------------------------------------------
 # node
@@ -53,13 +54,16 @@ alias gpn='pushnew' #see './functions'
 
 alias n='npm'
 alias ni='n install'
+alias nid='ni -D'
 alias ns='n start'
+alias nsd='n run start:dev'
 alias nls='n list --depth=0'
 alias nlsg='nls -g'
 alias y='yarn'
-alias yi='yarn install'
-alias ysd='yarn start:dev'
-alias yr='yarn run'
+alias yi='y install'
+alias ys='y start'
+alias ysd='y start:dev'
+alias yr='y run'
 
 
 # ----------------------------------------------------------------------------
