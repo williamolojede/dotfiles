@@ -64,6 +64,9 @@ alias yi='y install'
 alias ys='y start'
 alias ysd='y start:dev'
 alias yr='y run'
+alias yt='y test'
+alias ytw='y test:watch'
+alias ytc='y test:coverage'
 
 
 # ----------------------------------------------------------------------------
