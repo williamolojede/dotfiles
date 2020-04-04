@@ -75,8 +75,8 @@ export PATH="$PATH:$HOME/.bin"
 DEFAULT_USER=`whoami`
 
 # npm
-npm-token() { echo `awk -F\= '{gsub(/"/,"",$2);print $2}' ~/.npmrc` }
-export NPM_TOKEN="$(npm-token)"
+# npm-token() { echo `awk -F\= '{gsub(/"/,"",$2);print $2}' ~/.npmrc` }
+# export NPM_TOKEN="$(npm-token)"
 
 # node verion manager
 export NVM_DIR="$HOME/.nvm"
